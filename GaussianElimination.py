@@ -72,3 +72,44 @@ class Solution:
             res.append(abs(matrix_original[i][-1] - su))
 
         return res
+    
+n = int(input())
+m = []
+
+for i in range(n):
+    m.append(list(map(int, input().split())))
+
+
+res = Solution.solveByGauss(n, m)
+if (not Solution.isSolutionExists):
+    print(Solution.errorMessage)
+else:
+    print(*res)
+
+# # SimpleIterations.py
+# 3
+# 2 1 -1 8
+# -3 -1 2 -11
+# -2 1 2 -3
+
+# Output:
+# 2.0 3.0000000000000004 -0.9999999999999999 0.0 0.0 0.0
+
+
+# SimpleIterations.py
+# 3
+# 1 1 1 6
+# 0 2 5 -4
+# 2 5 -1 27
+
+# Output:
+# 5.0 3.0 -2.0 0.0 0.0 0.0
+
+# SimpleIterations.py
+# 3
+# 1 1 1 6
+# 0 2 5 -4
+# 2 5 -1 27
+
+# Output:
+# 5.0 3.0 -2.0 0.0 0.0 0.0
